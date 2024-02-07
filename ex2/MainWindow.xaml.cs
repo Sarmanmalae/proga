@@ -34,6 +34,7 @@ namespace ex2
         {
             string str = (string)((Button)e.OriginalSource).Content;
 
+
             if (str == "C")
                 textlabel.Text = "";
             else if (str == "⌫" && textlabel.Text.Length>0)
