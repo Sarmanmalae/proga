@@ -1,0 +1,61 @@
+﻿<Window x:Class="ex3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ex3"
+        mc:Ignorable="d"
+        Title="Calculator" Height="595" Width="883" Background="#F3F3F3">
+    <Grid x:Name="MainRoot" Width="880" HorizontalAlignment="Left">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="110" />
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="220" />
+        </Grid.ColumnDefinitions>
+        <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Text=""  Background="Wheat" Margin="5,-34,5,5" FontSize="22" FontWeight="Bold" FontFamily="Arial Black" x:Name="textlabel2" RenderTransformOrigin="0.5,0.5" IsReadOnly="True" MaxLength="15" TextAlignment="Right" Height="45" BorderBrush="Wheat" SelectionBrush="Wheat" SelectionTextBrush="Wheat" CaretBrush="Wheat" Foreground="#FF737373" OpacityMask="Wheat" AutomationProperties.IsOffscreenBehavior="Offscreen"/>
+        <Button Grid.Column="0" Grid.Row="1" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black">C</Button>
+        <Button Grid.Column="1" Grid.Row="1" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="/"/>
+        <Button Grid.Column="2" Grid.Row="1" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="*"/>
+        <Button Grid.Column="3" Grid.Row="1" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="-"/>
+        <Button Grid.Column="3" Grid.Row="2" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Grid.RowSpan="3" Content="+"/>
+        <Button Grid.Column="1" Grid.Row="5" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="."/>
+        <Button Grid.Column="3" Grid.Row="5" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Grid.ColumnSpan="1" Content="="/>
+        <Button Grid.Column="2" Grid.Row="5" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Grid.ColumnSpan="1" Content="⌫"/>
+        <Button Grid.Column="0" Grid.Row="5" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="0"/>
+        <Button Grid.Column="2" Grid.Row="2" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="9"/>
+        <Button Grid.Column="1" Grid.Row="2" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="8"/>
+        <Button Grid.Column="0" Grid.Row="2" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="7"/>
+        <Button Grid.Column="2" Grid.Row="3" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="6"/>
+        <Button Grid.Column="1" Grid.Row="3" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="5"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="4"/>
+        <Button Grid.Column="2" Grid.Row="4" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="3"/>
+        <Button Grid.Column="1" Grid.Row="4" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="2"/>
+        <Button Grid.Column="0" Grid.Row="4" Background="#B3F5DE" Margin="5,5,5,5" FontSize="48" FontWeight="Bold" FontFamily="Arial Black" Content="1"/>
+        <CheckBox x:Name="checkbox1" Content="Остановить запись" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="414" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked" Height="20" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="4"/>
+        <Label x:Name="label1" Content="Удалить последнюю операцию" HorizontalAlignment="Left" Margin="41,0,0,0" VerticalAlignment="Center" Width="204" Height="30" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="4"/>
+        <Label x:Name="label2" Content="Удалить всю историю" HorizontalAlignment="Left" Margin="41,63,0,0" VerticalAlignment="Top" Width="204" Height="29" Grid.ColumnSpan="2" Grid.Row="2" Grid.Column="4"/>
+        <Button x:Name="button1" Click="Delete_last" Content="-" HorizontalAlignment="Left" Margin="11,0,0,0" VerticalAlignment="Center" Height="14" Width="27" Grid.Row="2" Grid.Column="4"/>
+        <Button x:Name="button2" Click="Clear_all" Content="-" HorizontalAlignment="Left" Margin="11,71,0,0" VerticalAlignment="Top" Height="14" Width="27" Grid.Row="2" Grid.Column="4"/>
+        <ListBox x:Name="mathList" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Margin="5,5,16,5"/>
+
+        <Border x:Name="border1" BorderBrush="Black" BorderThickness="2" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Margin="5,5,16,5" />
+        <RadioButton Grid.Column="4" Content="Да" HorizontalAlignment="Left" Margin="11,68,0,0" Grid.Row="5" VerticalAlignment="Top" Checked="RadioButton_Checked" IsChecked="True" IsThreeState="True"/>
+        <RadioButton Grid.Column="4" Content="Нет" HorizontalAlignment="Left" Margin="110,68,0,0" Grid.Row="5" VerticalAlignment="Top" Checked="RadioButton_Checked_1"/>
+        <Label Grid.Column="4" Content="Показать историю операций и его настройки?" HorizontalAlignment="Left" Margin="7,40,0,0" Grid.Row="5" VerticalAlignment="Top" Width="282" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"  Background="Wheat" Margin="5,48,5,5" FontSize="36" FontWeight="Bold" FontFamily="Arial Black" Text="" TextAlignment="Right" x:Name="textlabel" IsReadOnly="True" MaxLength="15" Height="50" SelectionBrush="Wheat" BorderBrush="Wheat" SelectionTextBrush="Wheat" CaretBrush="Wheat" OpacityMask="Wheat"  />
+        <Border BorderBrush="Black" BorderThickness="2" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Margin="5,5,5,5" />
+        <Rectangle Stroke="Wheat" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Fill="Wheat" Margin="7,36,7,39"/>
+    </Grid>
+
+</Window>
