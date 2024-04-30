@@ -5,42 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ex5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Background="Wheat">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="29*"/>
-            <RowDefinition Height="405*"/>
-        </Grid.RowDefinitions>
-        <ComboBox x:Name="comboBox_Color" SelectionChanged="ComboBox_Color_SelectionChanged" Margin="340,5,345,5">
-            <ComboBoxItem Content="Red"/>
-            <ComboBoxItem Content="Blue"/>
-            <ComboBoxItem Content="Green"/>
-            <ComboBoxItem Content="Gray"/>
-            <ComboBoxItem Content="AliceBlue"/>
-            <ComboBoxItem Content="Violet"/>
-        </ComboBox>
-        <ComboBox x:Name="comboBox_Font" SelectionChanged="ComboBox_Font_SelectionChanged" Margin="645,5,40,5">
-            <ComboBoxItem Content="Arial"/>
-            <ComboBoxItem Content="Times New Roman"/>
-            <ComboBoxItem Content="Calibri"/>
-            <ComboBoxItem Content="Consolas"/>
-            <ComboBoxItem Content="Impact"/>
-            <ComboBoxItem Content="Gadugi"/>
-        </ComboBox>
-        <ComboBox x:Name="comboBox_FontSize" SelectionChanged="ComboBox_FontSize_SelectionChanged" Margin="40,5,645,5">
-            <ComboBoxItem Content="12"/>
-            <ComboBoxItem Content="14"/>
-            <ComboBoxItem Content="16"/>
-            <ComboBoxItem Content="18"/>
-            <ComboBoxItem Content="24"/>
-            <ComboBoxItem Content="36"/>
-        </ComboBox>
 
-        <ScrollViewer Margin="0,20,0,0" Grid.Row="1">
-            <TextBox x:Name="textBox" FontFamily="Arial" Text="" TextWrapping="Wrap" AcceptsReturn="True" TextChanged="TextBox_TextChanged"/>
-        </ScrollViewer>
-        <Label Content="FontSize" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.RowSpan="2" Margin="40,24,0,0"/>
-        <Label Content="FontFamily" HorizontalAlignment="Left"  VerticalAlignment="Top" Grid.RowSpan="2" Margin="340,24,0,0"/>
-        <Label Content="Color" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.RowSpan="2" Margin="645,24,0,0"/>
     </Grid>
 </Window>
